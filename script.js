@@ -1,0 +1,2 @@
+function addToCart(name,price){let cart=JSON.parse(localStorage.getItem('cart'))||[];cart.push({name,price});localStorage.setItem('cart',JSON.stringify(cart));alert('Added to cart');}
+if(document.getElementById('cartItems')){let cart=JSON.parse(localStorage.getItem('cart'))||[];let total=0;cart.forEach(i=>{document.getElementById('cartItems').innerHTML+=`<li>${i.name} - ₹${i.price}</li>`;total+=i.price;});document.getElementById('total').innerText='Total: ₹'+total;}
